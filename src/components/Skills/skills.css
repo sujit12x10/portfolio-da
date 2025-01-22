@@ -1,5 +1,5 @@
-.skills__container{
-    grid-template-columns: repeat(2, 350px);
+/* .skills__container{
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
     justify-content: center;
 }
@@ -9,25 +9,27 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 2rem 4rem;
     border-radius: 1.25rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .skills__title{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     text-align: center;
-    margin-bottom: var(--mb-1-5);
+    margin-bottom: var(--mb-2-5);
 }
 
 .skills__box{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     column-gap: 2.5rem;
 }
 
 .skills__group{
-    display: grid;
-    align-items: flex-start;
-    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
 }
 
 .skills__data{
@@ -75,4 +77,55 @@
     .skills__name{
         font-size: var(--small-font-size);
     }
+} */
+
+.skills__container{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    justify-content: center;
+    padding: 0rem 2rem;
+}
+
+.skill__title{
+    text-align: center;
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-1-5);
+}
+
+.skills__group{
+    background-color: var(--container-color);
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2rem 2rem;
+    border-radius: 0.5rem;
+}
+
+.skills__group li{
+    display: flex;
+    padding: 0.2rem;
+    align-items: center;
+    color: var(--title-color);
+}
+
+.skills-icon{
+    display: flex;
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 992px){
+    .skills__container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .skills__container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 350px){
+    
 }

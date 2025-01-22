@@ -16,6 +16,7 @@ export const projectData = [
         title: "E-commerce",
         category: "react",
         link: "https://blake-online-store.vercel.app/",
+        tools: ["React", "Redux", "Firebase", "Tailwindcss", "Stripe"],
         description: ["Fully Functional E-Commerce platform. Made with React, React-Redux, React-Router-Dom, Tailwindcss, Stripe."]
     },
     {
@@ -24,6 +25,7 @@ export const projectData = [
         title: "Socail Media",
         category: "django",
         link: "https://projectdev.pythonanywhere.com/",
+        tools: ["Django", "Semantic UI", "JavaScript"],
         description: ["Social Media platform where you can post, make new friends. Made with Django Framework, JavaScript, Bootstrap and Semantic UI for styling."]
     },
     {
@@ -32,6 +34,7 @@ export const projectData = [
         title: "Blog Website",
         category: "react",
         link: "https://blog-with-react-beta.vercel.app/",
+        tools: ["React", "Appwrite", "TinyMCE", "Redux", "Tailwindcss"],
         description: ["Bloging Platform where you can post content with images. Made with React, Appwrite, TinyMCE, React-Redux, React-Router-Dom, Tailwindcss."]
     },
     {
@@ -40,6 +43,7 @@ export const projectData = [
         title: "Random Winner Game(IPL)",
         category: "django",
         link: "https://sujit10x12.pythonanywhere.com/",
+        tools: ["Django", "JavaScript", "Bootstrap"],
         description: ["Random Winner Game of IPL teams. Made with Django, JavaScript, Bootstrap."]
     },
     {
@@ -48,6 +52,7 @@ export const projectData = [
         title: "Blog API",
         category: "DRF",
         link: "",
+        tools: [],
         description: [""]
     },
     {
@@ -56,6 +61,7 @@ export const projectData = [
         title: "Store API",
         category: "DRF",
         link: "",
+        tools: [],
         description: []
     },
 ]

@@ -14,7 +14,13 @@ export const About = () => {
                     <Info />
 
                     <p className="about__description">
-                        Web Developer, I've been exploring this field since 2023. I can work with React, JavaS
+                        Believe in the philosophy of life-long learning. 
+                        Style web pages with intent and code with passion.
+                        <br /> <br />
+                        I've been exploring this field since 2023.
+                        I've developed various personal projects in Django, Django Rest Framework and React.
+                        <br /><br />
+                        When I'm not developing, I like to spend my time on things that fresh my mind and give me the inner peace that helps me at my work.
                     </p>
 
                     <a download="" href={CV} className="button button--flex">
@@ -50,3 +56,5 @@ export const About = () => {
         </section>
     )
 }
+
+// Full Stack developer with a deep passion for Python and JavaScript. 

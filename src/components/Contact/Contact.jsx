@@ -2,6 +2,7 @@ import { MdDoubleArrow } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
 import "./contact.css"
 
 import React, { useRef } from 'react';
@@ -9,6 +10,7 @@ import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
 
+    const notify = () => toast.success("Message has been sent! Thank you :)");
     const form = useRef();
     const sendEmail = (e) => {
 
@@ -16,11 +18,13 @@ export const Contact = () => {
         emailjs.sendForm('service_oby44um', 'template_d3yqwrc', form.current, {
             publicKey: 'rdrhKsTK5vUbGiNnN',
         })
+        notify()
         e.target.reset()
     };
 
     return (
         <div className="contact section" id="contact">
+            <ToastContainer autoClose={2000} position="bottom-left" type="error" theme="dark"/>
             <h2 className="section__title">Get in touch</h2>
             <span className="section__subtitle">Contact Me</span>
 
@@ -56,22 +60,26 @@ export const Contact = () => {
                 </div>
 
                 <div className="contact__content">
-                    <h3 className="contact__title">Write me your project</h3>
+                    <h3 className="contact__title">Send me a message!</h3>
+                    <p className="contact__subtitle">Have any questions or proposals?
+                        <br />
+                        Just want to say hello? Please do.
+                    </p>
 
                     <form className="contact__form" ref={form} onSubmit={sendEmail}>
                         <div className="contact__form-div">
                             <label htmlFor="" className="contact__form-tag">Name</label>
-                            <input type="text" name="name" className="contact__form-input" placeholder="Insert your name"/>
+                            <input required type="text" name="name" className="contact__form-input" placeholder="Insert your name"/>
                         </div>
 
                         <div className="contact__form-div">
                             <label htmlFor="" className="contact__form-tag">Email</label>
-                            <input type="text" name="email" className="contact__form-input" placeholder="Insert your email"/>
+                            <input required type="text" name="email" className="contact__form-input" placeholder="Insert your email"/>
                         </div>
 
                         <div className="contact__form-div contact__form-area">
                             <label htmlFor="" className="contact__form-tag">Message</label>
-                            <textarea name="message" id="" cols="30" rows="10" className="contact__form-input" placeholder="Insert your message"></textarea>
+                            <textarea required name="message" id="" cols="30" rows="10" className="contact__form-input" placeholder="Insert your message"></textarea>
                         </div>
 
                         <button className="button button--flex">

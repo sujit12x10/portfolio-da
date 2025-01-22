@@ -8,15 +8,25 @@ export const WorkItems = ({item}) => {
     
     return (
         <>
-            <div className="work__card" key={item.id}>
+            <div onClick={() => setToggleState(true)} className="work__card" key={item.id}>
                 <img src={item.image} alt="" className="work__img"/>
                 <div className="work__detail">
                     <h3 className="work__title">{item.title}</h3>
-                    <p onClick={() => setToggleState(true)}>Detail</p>
+                    {/* <p onClick={() => setToggleState(true)}>Detail</p> */}
+                    <a href={item.link} target="_blank" className="work__button">
+                        Demo <FaArrowRightLong className="work__button-icon"/>
+                    </a>    
                 </div>
-                <a href={item.link} target="_blank" className="work__button">
+                <div className="work__detail-tools">
+                    {
+                        item.tools.map((item) => (
+                            <button key={item} className="work__detail-tool-button">{item}</button>
+                        ))
+                    }
+                </div>
+                {/* <a href={item.link} target="_blank" className="work__button">
                     Demo <FaArrowRightLong className="work__button-icon"/>
-                </a>
+                </a> */}
             </div>
             <div className={toggleState ? "detail__modal detail__modal-active" : "detail__modal"}>
                 <div className="detail__modal-content">

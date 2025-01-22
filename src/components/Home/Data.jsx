@@ -55,7 +55,8 @@ export const Data = () => {
             </h1>
             <h3 className="home__subtitle">Web Developer</h3>
             <p className="home__description">
-                I'm(26 years old) a Full Stack Web Developer based in India, currently looking for my first job.
+                I'm(26 years old) a Full Stack Web Developer based in India.
+                I'm hoping to find an entry-level job with a respectable company where I can continue to grow while also helping the company grow over time.
             </p>
             <a href="#contact" className="button button--flex">
                 Say Hello
