@@ -23,7 +23,7 @@ export const Contact = () => {
     };
 
     return (
-        <div className="contact section" id="contact">
+        <section className="contact section" id="contact">
             <ToastContainer autoClose={2000} position="bottom-left" type="error" theme="dark"/>
             <h2 className="section__title">Get in touch</h2>
             <span className="section__subtitle">Contact Me</span>
@@ -105,6 +105,6 @@ export const Contact = () => {
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

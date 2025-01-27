@@ -6,17 +6,74 @@ import { FaRegImage } from "react-icons/fa";
 import { AiOutlineSend } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
 import { AiOutlineAppstore } from "react-icons/ai";
-import { useState } from "react";
+import { GiSkills } from "react-icons/gi";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
+
+    const [toggle, setToggle] = useState(false)
+    const [activeNav, setActiveNav] = useState("#home")
+
     window.addEventListener("scroll", function () {
         const header = document.querySelector(".header")
         if (this.scrollY >= 80) header.classList.add("scroll-header")
         else header.classList.remove("scroll-header")
     })
 
-    const [toggle, setToggle] = useState(false)
-    const [activeNav, setActiveNav] = useState("#home")
+    const navItems = [
+        {
+            name: "home",
+            icon: <GoHome />
+        },
+        {
+            name: "about",
+            icon: <FaRegUser />
+        },
+        {
+            name: "skills",
+            icon: <GiSkills />
+        },
+        {
+            name: "projects",
+            icon: <FaRegFileAlt />
+        },
+        {
+            name: "contact",
+            icon: <AiOutlineSend />
+        },
+    ]
+
+    const home = document.querySelector("#home")
+
+    useEffect(() => {
+        const sections = [...document.querySelectorAll(".section")]
+        
+        const observerShort = new IntersectionObserver((entries) => {
+            for (let entry of entries){
+                if (entry.isIntersecting){
+                    console.log(entry);
+                    setActiveNav(`#${entry.target.id}`)
+                }
+            }
+        }, {threshold: 0.2})
+
+        const observerLong = new IntersectionObserver((entries) => {
+            for (let entry of entries){
+                if (entry.isIntersecting){
+                    console.log(entry);
+                    setActiveNav(`#${entry.target.id}`)
+                }
+            }
+        }, {threshold: 0.5})
+
+        sections.map((section) => {
+            observerShort.observe(section)
+        })
+
+        sections.map((section) => {
+            observerLong.observe(section)
+        })
+    })
 
     return (
         <header className="header">
@@ -25,31 +82,15 @@ export const Header = () => {
             
                 <div className={toggle ? "nav__menu show-menu" : "nav__menu"} >
                     <ul className="nav__list grid">
-                        <li className="nav__item">
-                            <a href="#home" onClick={() => setActiveNav("#home")} className={activeNav === "#home" ? "nav__link active-link" : "nav__link"}>
-                                <span className="nav__icon"><GoHome /></span> Home
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a onClick={() => setActiveNav("#about")} className={activeNav === "#about" ? "nav__link active-link" : "nav__link"} href="#about">
-                                <span className="nav__icon"><FaRegUser /> </span> About
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a onClick={() => setActiveNav("#skills")} className={activeNav === "#skills" ? "nav__link active-link" : "nav__link"} href="#skills">
-                                <span className="nav__icon"><FaRegFileAlt /></span> Skills
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a onClick={() => setActiveNav("#portfolio")} className={activeNav === "#portfolio" ? "nav__link active-link" : "nav__link"} href="#portfolio">
-                                <span className="nav__icon"><FaRegImage /></span> Portfolio
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a onClick={() => setActiveNav("#contact")} className={activeNav === "#contact" ? "nav__link active-link" : "nav__link"} href="#contact">
-                                <span className="nav__icon"><AiOutlineSend /></span>Contact
-                            </a>
-                        </li>
+                        {
+                            navItems.map(item => 
+                                <li key={item.name} className="nav__item">
+                                    <a href={`#${item.name}`} onClick={() => setActiveNav(`#${item.name}`)} className={activeNav === `#${item.name}` ? "nav__link active-link" : "nav__link"}>
+                                        <span className="nav__icon">{item.icon}</span> {item.name}
+                                    </a>
+                                </li>
+                            )
+                        }
                     </ul>
                     <span className="nav__close" onClick={() => setToggle(!toggle)}>
                         <IoClose />

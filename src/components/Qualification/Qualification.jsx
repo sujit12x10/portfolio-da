@@ -1,5 +1,5 @@
 import { FaUserGraduate } from "react-icons/fa";
-import { IoBagSharp } from "react-icons/io5";
+import { BsFillSuitcaseLgFill } from "react-icons/bs";
 import { IoCalendarOutline } from "react-icons/io5";
 import "./qualification.css"
 import { useState } from "react";
@@ -11,7 +11,7 @@ export const Qualification = () => {
     }
 
     return (
-        <section className="qualification section">
+        <div className="qualification">
             <h2 className="section__title">Qualification</h2>
             <span className="section__subtitle">My Personal Journey</span>
 
@@ -22,7 +22,7 @@ export const Qualification = () => {
                     </div>
 
                     <div onClick={() => setToggleState(2)} className={toggleState === 2 ? "qualification__button qualification__active button--flex" : "qualification__button button--flex"}>
-                        <span className="qualification__icon"><IoBagSharp /></span>Experience
+                        <span className="qualification__icon"><BsFillSuitcaseLgFill /></span>Experience
                     </div>
                 </div>
 
@@ -160,6 +160,6 @@ export const Qualification = () => {
                     </div>
                 </div>
             </div>
-        </section >
+        </div >
     )
 }

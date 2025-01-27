@@ -21,9 +21,6 @@ export const Skills = () => {
             <span className="section__subtitle">My Techinal Level</span>
 
             <div className="skills__container container grid">
-                {/* <Frontend />
-                <Backend />
-                <OtherTools /> */}
                 <div className="skills__group">
                     <h3 className="skill__title">Languages</h3>
                     <ul>
