@@ -37,8 +37,7 @@ export const Contact = () => {
                             <span className="contact__card-icon"><IoCallOutline /></span>
                             <h3 className="contact__card-title">Phone</h3>
                             <span className="contact__card-data">+91-8506880633</span>
-
-                            <a href="" className="contact__button">Write Me <MdDoubleArrow className="contact__button-icon"/></a>
+                            <a href="tel:850-688-0633" className="contact__button">Call Me <MdDoubleArrow className="contact__button-icon"/></a>
                         </div>
 
                         <div className="contact__card">
@@ -46,15 +45,14 @@ export const Contact = () => {
                             <h3 className="contact__card-title">Email</h3>
                             <span className="contact__card-data">sujit12x10@gmail.com</span>
 
-                            <a href="" className="contact__button">Write Me <MdDoubleArrow className="contact__button-icon"/></a>
+                            <a href="mailto:sujit12x10@gmail.com" className="contact__button">Write Me <MdDoubleArrow className="contact__button-icon"/></a>
                         </div>
 
                         <div className="contact__card">
                             <span className="contact__card-icon"><BsWhatsapp /></span>
                             <h3 className="contact__card-title">Whatsapp</h3>
                             <span className="contact__card-data">+91-8506880633</span>
-
-                            <a href="" className="contact__button">Write Me <MdDoubleArrow className="contact__button-icon"/></a>
+                            <a href="https://wa.me/8506880633" className="contact__button">Say Hello <MdDoubleArrow className="contact__button-icon"/></a>
                         </div>
                     </div>
                 </div>

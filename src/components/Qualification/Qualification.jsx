@@ -1,11 +1,14 @@
 import { FaUserGraduate } from "react-icons/fa";
-import { BsFillSuitcaseLgFill } from "react-icons/bs";
+import { MdHomeRepairService } from "react-icons/md";
 import { IoCalendarOutline } from "react-icons/io5";
+import { PiSuitcaseSimpleDuotone } from "react-icons/pi";
 import "./qualification.css"
 import { useState } from "react";
-export const Qualification = () => {
-    const [toggleState, setToggleState] = useState(1)
 
+
+export const Qualification = () => {
+
+    const [toggleState, setToggleState] = useState(1)
     const toggleTab = (index) => {
         setToggleState(index)
     }
@@ -22,7 +25,7 @@ export const Qualification = () => {
                     </div>
 
                     <div onClick={() => setToggleState(2)} className={toggleState === 2 ? "qualification__button qualification__active button--flex" : "qualification__button button--flex"}>
-                        <span className="qualification__icon"><BsFillSuitcaseLgFill /></span>Experience
+                        <span className="qualification__icon"><PiSuitcaseSimpleDuotone size={25}/>Experience</span>
                     </div>
                 </div>
 
@@ -75,6 +78,7 @@ export const Qualification = () => {
                                 </div>
                             </div>
 
+
                             <div>
                                 <span className="qualification__rounder"></span>
                                 <span className="qualification__line"></span>
@@ -90,7 +94,19 @@ export const Qualification = () => {
                             </div>
 
                             <div>
-                                <h3 className="qualification__title">BCOM.</h3>
+                                <h3 className="qualification__title">Python</h3>
+                                <span className="qualification__subtitle">
+                                    Google
+                                </span>
+                                <div className="qualification__calender">
+                                    <span><IoCalendarOutline /> September 2022</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="qualification__data">
+                            <div>
+                                <h3 className="qualification__title">BCOM</h3>
                                 <span className="qualification__subtitle">
                                     IGNOU
                                 </span>
@@ -98,12 +114,17 @@ export const Qualification = () => {
                                     <span><IoCalendarOutline /> 2017 - 2020</span>
                                 </div>
                             </div>
+
+                            <div>
+                                <span className="qualification__rounder"></span>
+                                <span className="qualification__line"></span>
+                            </div>
                         </div>
                     </div>
 
                     <div className={toggleState === 2 ? "qualification__content qualification__content-active" : "qualification__content"}>
                         <p>
-                            Personal Projects practice have made good number of projects in Django Framework, Django Rest Framework and React JS.
+                            Having experience with personal projects. I have done projects in Django, Django Rest Framework, React.
                         </p>
                         {/* <div className="qualification__data">
                             <div>

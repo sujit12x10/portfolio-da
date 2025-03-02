@@ -17,13 +17,13 @@ export const Footer = () => {
                         <a href="#about" className="footer__link">About</a>
                     </li>
                     <li>
-                        <a href="#portfolio" className="footer__link">Portfolio</a>
+                        <a href="#projects" className="footer__link">Portfolio</a>
                     </li>
                 </ul>
 
                 <div className="footer__social">
-                    <a href="" className="home__social-icon" target="_blank"><FaGithub /></a>
-                    <a href="" className="home__social-icon" target="_blank"><MdOutlineMailOutline /></a>
+                    <a href="https://github.com/sujit12x10/" className="home__social-icon" target="_blank"><FaGithub /></a>
+                    <a href="mailto:sujit12x10@gmail.com" className="home__social-icon" target="_blank"><MdOutlineMailOutline /></a>
                 </div>
 
                 <span className="footer__copy">

@@ -122,7 +122,7 @@
     width: 500px;
     position: relative;
     background-color: var(--container-color);
-    padding: 4.5rem 2.5rem 2.5rem;
+    padding: 2.4rem 0rem;
     border-radius: 1rem;
 }
 
@@ -134,8 +134,7 @@
     cursor: pointer;
 }
 
-.detail__modal-title,
-.detail__modal-description{
+.detail__modal-title{
     text-align: center;
 }
 

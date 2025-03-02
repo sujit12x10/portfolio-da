@@ -20,7 +20,6 @@ export const Works = () => {
             setProjects(projectData)
         } else{
             const newProjects = projectData.filter((project) => project.category === item.name)
-            console.log(newProjects);
             
             setProjects(newProjects)
         }
@@ -37,7 +36,16 @@ export const Works = () => {
                 ))
             }
             </div>
-
+            <div>
+                <p style={{
+                    textAlign: "center",
+                    paddingBottom: "1rem",
+                    fontSize: "0.8rem",
+                    color: "red"
+                }}> 
+                    *Some projects are under development
+                </p>
+            </div>
             <div className="work__container container grid">
                 {   projects &&
                     projects.map((item) => (

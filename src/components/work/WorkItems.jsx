@@ -8,8 +8,8 @@ export const WorkItems = ({item}) => {
     
     return (
         <>
-            <div onClick={() => setToggleState(true)} className="work__card" key={item.id}>
-                <img src={item.image} alt="" className="work__img"/>
+            <div className="work__card" key={item.id}>
+                <img onClick={() => setToggleState(true)} src={item.image} alt="" className="work__img"/>
                 <div className="work__detail">
                     <h3 className="work__title">{item.title}</h3>
                     {/* <p onClick={() => setToggleState(true)}>Detail</p> */}

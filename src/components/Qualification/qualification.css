@@ -15,7 +15,6 @@
 .qualification__button{
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
-    /* color: var(--title-color); */
     color: hsl(0deg 2.84% 44.55%);
     margin: 0 var(--mb-1);
     cursor: pointer;
@@ -28,6 +27,8 @@
 .qualification__icon{
     font-size: 1.3rem;
     margin-right: var(--mb-0-25);
+    display: flex;
+    align-items: center;
 }
  
 .qualification__active{
@@ -46,6 +47,7 @@
 }
 
 .qualification__content-active{
+    text-align: center;
     display: block;
 }
 

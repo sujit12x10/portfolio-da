@@ -51,7 +51,6 @@ export const Header = () => {
         const observerShort = new IntersectionObserver((entries) => {
             for (let entry of entries){
                 if (entry.isIntersecting){
-                    console.log(entry);
                     setActiveNav(`#${entry.target.id}`)
                 }
             }
@@ -60,7 +59,6 @@ export const Header = () => {
         const observerLong = new IntersectionObserver((entries) => {
             for (let entry of entries){
                 if (entry.isIntersecting){
-                    console.log(entry);
                     setActiveNav(`#${entry.target.id}`)
                 }
             }
