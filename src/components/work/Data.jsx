@@ -7,7 +7,9 @@ import Work5 from "../../assets/work5.jpg"
 import cricket from "../../assets/cricket.jpg"
 import social from "../../assets/bff.jpg"
 import blog from "../../assets/blog.png"
-import store from "../../assets/store.png"
+import store from "../../assets/e-store.png"
+import store_drf from "../../assets/store-drf.png"
+import blango from "../../assets/blango.png"
 
 export const projectData = [
     {
@@ -48,21 +50,21 @@ export const projectData = [
     },
     {
         id: 5,
-        image: Work5,
-        title: "Store API",
+        image: store_drf,
+        title: "Store API DRF",
         category: "DRF",
         link: "https://sujit1210.pythonanywhere.com/api/v1/",
         tools: ["Django Rest Framework", "Other Tools"],
-        description: [""]
+        description: ["It is a REST API for an e-commerce store built using Django REST framework."]
     },
     {
         id: 6,
-        image: Work5,
-        title: "Blog API",
+        image: blango,
+        title: "Blango",
         category: "DRF",
         link: "https://github.com/sujit12x10/blango",
         tools: ["Django Rest Framework", "Other Tools"],
-        description: []
+        description: ["Blango is a REST API built in Django Rest Framework."]
     },
 ]
 
