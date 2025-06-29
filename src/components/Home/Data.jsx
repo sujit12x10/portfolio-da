@@ -54,7 +54,7 @@ export const Data = () => {
             </h1>
             <h3 className="home__subtitle">Web Developer</h3>
             <p className="home__description">
-                I'm(26 years old) a Full Stack Web Developer based in India.
+                Welcome! I'm Sujeet Singh, a data analyst passionate about transforming data into actionable insights.
                 I'm hoping to find an entry-level job with a respectable company where I can continue to grow while also helping the company grow over time.
             </p>
             <a href="#contact" className="button button--flex">
