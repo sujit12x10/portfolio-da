@@ -73,12 +73,15 @@ export const projectNav = [
         name: "all",
     },
     {
-        name: "django",
+        name: "Python",
     },
     {
-        name: "react",
+        name: "SQL",
     },
     {
-        name: "DRF",
+        name: "Tableau",
+    },
+    {
+        name: "PowerBi",
     },
 ]
